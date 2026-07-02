@@ -1,0 +1,39 @@
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/
+
+
+     execution: local
+        script: monitoring/load-testing/test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 20 max VUs, 1m30s max duration (incl. graceful stop):
+              * default: 20 looping VUs for 1m0s (gracefulStop: 30s)
+
+
+
+  █ TOTAL RESULTS
+
+    HTTP
+    http_req_duration..............: avg=2.58ms min=818.93µs med=2.13ms max=18.13ms p(90)=3.94ms p(95)=4.98ms
+      { expected_response:true }...: avg=2.58ms min=818.93µs med=2.13ms max=18.13ms p(90)=3.94ms p(95)=4.98ms
+    http_req_failed................: 0.00%  0 out of 1200
+    http_reqs......................: 1200   19.930962/s
+
+    EXECUTION
+    iteration_duration.............: avg=1s     min=1s       med=1s     max=1.03s   p(90)=1s     p(95)=1s
+    iterations.....................: 1200   19.930962/s
+    vus............................: 20     min=20        max=20
+    vus_max........................: 20     min=20        max=20
+
+    NETWORK
+    data_received..................: 278 kB 4.6 kB/s
+    data_sent......................: 85 kB  1.4 kB/s
+
+
+
+
+running (1m00.2s), 00/20 VUs, 1200 complete and 0 interrupted iterations
+default ✓ [======================================] 20 VUs  1m0s
