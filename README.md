@@ -1,4 +1,4 @@
-# AWS DevOps Technical Assignment
+# AWS DevOps Deployment Pipeline
 
 A Dockerized Flask REST API deployed on AWS following production-style DevOps practices — automated CI/CD, monitoring and alerting, backups, and load testing, all built on AWS Free Tier services.
 
